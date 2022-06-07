@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+body{
+    background-color: #ebf2ff;
+    height: 1800px;
+}
+
+.container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tabs{
+    display: flex;
+    font-size: 8rem;
+    background-color: #fff;
+    padding: 13px;
+    border-radius: 100px;
+    position: relative;
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tab{
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 10px;
+}
+
+span.notification{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50px;
+    background: hotpink;
+    margin-left: 0.45rem;
+    background-color: #e6eef9;
+}
+
+/* !Input CSS */
+
+input[type='radio']:checked + label{
+    color: #185ee0;
+}
+
+input[type='radio']:checked + label > .notification{
+    background-color: #185ee0;
+    color: #fff;
+}
+
+input[id='radio-1']:checked ~ .glider{
+    transform:translateX(0) ;
+    transition: 0.25s ease-in-out;
+}
+
+input[id='radio-2']:checked ~ .glider{
+    transform: translateX(100%);
+    transition: 0.25s ease-in-out;
+}
+
+input[id='radio-3']:checked ~ .glider{
+    transform: translateX(200%);
+    transition: 0.25s ease-in-out;
+}
+
+input[type='radio']{
+    display: none;
+}
+
+.glider{
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    display: flex;
+    height: 30px;
+    width: 110px;
+    background-color: #e6eef9;
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-in-out;
+}
+
